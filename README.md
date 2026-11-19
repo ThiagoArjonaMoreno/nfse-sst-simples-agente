@@ -28,5 +28,4 @@ O agente não deve misturar CNAEs, códigos (LC 116, NBS, `cIndOp`) ou terminolo
 2. Forneça `schemas/perfis-fiscais.json` e os arquivos de `profiles/` e `docs/` como base de consulta do agente.
 3. Informe o perfil ativo, o CNAE utilizado e o escopo do serviço para gerar o preenchimento guiado da NFS-e.
 
-> **IMPORTANTE!** Se você tem dúvidas — como eu tinha — de como usar o conteúdo desse projeto para treinar a IA a te ajudar com essa estruturação, vá até a pasta [docs](nfse-sst-simples-agente
-/docs/como-usar-esse-projeto.md) e veja o guia de uso.
+> **IMPORTANTE!** Se você tem dúvidas — como eu tinha — de como usar o conteúdo desse projeto para treinar a IA a te ajudar com essa estruturação, acesse o guia em [docs/como-usar-esse-projeto.md](docs/como-usar-esse-projeto.md).
