@@ -11,8 +11,12 @@ A base foi estruturada para empresas optantes pelo **Simples Nacional**, mantend
 ## Estrutura do Repositório
 
 - `README.md`: Visão geral do projeto, escopo de atuação e instruções de uso.
-- `schemas/perfis-fiscais.json`: Regras fiscais do Simples Nacional, códigos de referência e listas de termos permitidos/proibidos por perfil.
+- `schemas/perfis-fiscais.json`: Regras fiscais do Simples Nacional, códigos de referência (CNAE, LC 116, NBS, `cIndOp`, IBS/CBS) e listas de termos permitidos/proibidos por perfil.
 - `prompts/router-prompt.md`: System prompt com triagem obrigatória, isolamento de perfis e checklist anti-contradição.
+- `profiles/perfil-tecnico-sst.md`: Diretrizes, códigos e modelos de descrição para o perfil `TECNICO_SST`.
+- `profiles/perfil-ergonomista.md`: Diretrizes, códigos e modelos de descrição para o perfil `ERGONOMISTA`.
+- `profiles/perfil-engenheiro-sst.md`: Diretrizes, códigos e modelos de descrição para o perfil `ENGENHEIRO_SST`.
+- `docs/checklist-emissao.md`: Guia rápido de conferência antes da transmissão da nota.
 
 ## Regra Central de Isolamento
 
@@ -21,5 +25,5 @@ O agente não deve misturar CNAEs, códigos (LC 116, NBS, `cIndOp`) ou terminolo
 ## Como Usar com Seu Agente de IA
 
 1. Configure o conteúdo de `prompts/router-prompt.md` como instrução do sistema / diretriz principal do agente.
-2. Anexe ou forneça `schemas/perfis-fiscais.json` como fonte de referência estruturada.
+2. Forneça `schemas/perfis-fiscais.json` e os arquivos de `profiles/` e `docs/` como base de consulta do agente.
 3. Informe o perfil ativo, o CNAE utilizado e o escopo do serviço para gerar o preenchimento guiado da NFS-e.
