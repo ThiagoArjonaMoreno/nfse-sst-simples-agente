@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.2.0",
+  "regime_tributario_base": {
+    "regime": "Simples Nacional",
+    "observacoes_fator_r": "Verificar Fator R (folha de salários / receita bruta dos últimos 12 meses >= 28%) para enquadramento no Anexo III ou Anexo V conforme o CNAE e a natureza do serviço.",
+    "regras_gerais_nfse": {
+      "issqn": {
+        "apuracao": "Via PGDAS-D (Simples Nacional)",
+        "exigibilidade_suspensa": "Não",
+        "retencao_iss_padrao": "Não (salvo exceção legal municipal expressa ou hipótese específica da LC 116)"
+      },
+      "tributacao_federal": {
+        "situacao_pis_cofins": "00 - Nenhum",
+        "tipo_retencao_pis_cofins_csll": "0 - PIS/COFINS/CSLL Não Retidos",
+        "irrf": null,
+        "contribuicoes_sociais_retidas": null,
+        "contribuicao_previdenciaria_retida": null
+      },
+      "ibs_cbs": {
+        "cst": "000",
+        "cClassTrib": "000001",
+        "documentos_referenciados": null
+      },
+      "valor_aproximado_tributos": {
+        "metodo": "Informar alíquota do Simples Nacional",
+        "observacao": "Utilizar alíquota efetiva do último PGDAS-D ou alíquota inicial do Anexo correspondente (Anexo III ou V conforme Fator R)."
+      }
+    }
+  },
+  "codigos_indicador_operacao_cindop": {
+    "100301": "Demais serviços em operações onerosas (padrão geral para consultorias, análises e prestações de serviço sem regra específica divergente)",
+    "100101": "Verificar quando houver regra específica de execução presencial/localidade exigida pela tabela vigente",
+    "100201": "Verificar quando houver regra específica de operação com particularidade própria no portal"
+  },
+  "repertorio_adicional_sst": {
+    "cnaes_complementares": [
+      {
+        "codigo": "71.20-1-00",
+        "descricao": "Testes e análises técnicas",
+        "perfis_compativeis": [
+          "ERGONOMISTA",
+          "ENGENHEIRO_SST"
+        ]
+      },
+      {
+        "codigo": "71.19-7-03",
+        "descricao": "Serviços de desenho técnico relacionados à arquitetura e engenharia",
+        "perfis_compativeis": [
+          "ENGENHEIRO_SST"
+        ]
+      },
+      {
+        "codigo": "85.99-6-99",
+        "descricao": "Outras atividades de ensino não especificadas anteriormente",
+        "perfis_compativeis": [
+          "TECNICO_SST"
+        ]
+      }
+    ],
+    "lc116_complementares": [
+      {
+        "codigo": "17.08.01",
+        "descricao": "Agenciamento de profissionais para execução de serviços, de qualquer natureza",
+        "observacao": "Usar somente se houver agenciamento/intermediação específica prevista no escopo e habilitada no emissor."
+      }
+    ],
+    "regra_selecao": "Sempre validar se o par LC 116 + NBS está habilitado para o município/emissor e se o CNAE consta no CNPJ e respeita o perfil ativo."
+  },
+  "perfis": {
+    "TECNICO_SST": {
+      "nome_exibicao": "Técnico de Segurança do Trabalho",
+      "escopo_permitido": [
+        "Inspeções de segurança e rotinas operacionais",
+        "Treinamentos e capacitações em Normas Regulamentadoras (NRs)",
+        "Apoio à gestão de CIPA, SIPAT e campanhas prevencionistas",
+        "Levantamento operacional de perigos e riscos",
+        "Orientação sobre uso, guarda e conservação de EPIs"
+      ],
+      "cnaes_referencia": [
+        {
+          "codigo": "82.99-7-99",
+          "descricao": "Outras atividades de serviços prestados principalmente às empresas não especificadas anteriormente"
+        },
+        {
+          "codigo": "85.99-6-04",
+          "descricao": "Treinamento em desenvolvimento profissional e gerencial (quando foco for capacitação/treinamento)"
+        },
+        {
+          "codigo": "85.99-6-99",
+          "descricao": "Outras atividades de ensino não especificadas anteriormente"
+        },
+        {
+          "codigo": "74.90-1-99",
+          "descricao": "Outras atividades profissionais, científicas e técnicas não especificadas anteriormente (quando aplicável ao objeto social e sem atribuição privativa de engenharia)"
+        }
+      ],
+      "codigos_nfse": {
+        "cIndOp_padrao": "100301",
+        "lc116_opcoes": [
+          {
+            "codigo": "17.01.01",
+            "descricao": "Assessoria ou consultoria de qualquer natureza, não contida em outros itens desta lista",
+            "complementar_sp_sugerido": "17.01.01.001",
+            "uso": "Apoio/assessoria técnica não privativa de engenharia"
+          },
+          {
+            "codigo": "08.02.01",
+            "descricao": "Instrução, treinamento, orientação pedagógica e educacional, avaliação de conhecimentos de qualquer natureza",
+            "uso": "Treinamentos operacionais e capacitações em NRs"
+          },
+          {
+            "codigo": "17.10.01",
+            "descricao": "Planejamento, organização e administração de feiras, exposições, congressos e congêneres",
+            "uso": "Eventos/ações como SIPAT ou campanhas educativas quando o escopo for esse"
+          }
+        ],
+        "nbs_referencia": [
+          {
+            "codigo": "114109000",
+            "descricao": "Serviços de consultoria técnica e científica não classificados em subposições anteriores"
+          },
+          {
+            "codigo": "122051000",
+            "descricao": "Serviços de treinamento profissional e desenvolvimento de recursos humanos (conferir tabela vigente no emissor)"
+          }
+        ]
+      },
+      "regras_descricao": {
+        "termos_recomendados": [
+          "inspeção de segurança",
+          "treinamento normativo",
+          "capacitação em NR",
+          "apoio técnico operacional em SST",
+          "prevenção de acidentes",
+          "conforme escopo acordado com a contratante"
+        ],
+        "termos_proibidos": [
+          "engenharia",
+          "engenheiro",
+          "laudo de engenharia",
+          "perícia técnica de engenharia",
+          "ART",
+          "responsabilidade técnica de engenharia"
+        ]
+      }
+    },
+    "ERGONOMISTA": {
+      "nome_exibicao": "Ergonomista / Consultor em Ergonomia",
+      "escopo_permitido": [
+        "Avaliação Ergonômica Preliminar (AEP)",
+        "Análise Ergonômica do Trabalho (AET)",
+        "Consultoria e assessoria técnica em ergonomia",
+        "Análise biomecânica, cognitiva e organizacional do trabalho",
+        "Elaboração de estudos, relatórios e recomendações ergonômicas"
+      ],
+      "cnaes_referencia": [
+        {
+          "codigo": "74.90-1-99",
+          "descricao": "Outras atividades profissionais, científicas e técnicas não especificadas anteriormente"
+        },
+        {
+          "codigo": "70.20-4-00",
+          "descricao": "Atividades de consultoria em gestão empresarial (quando escopo envolver organização do trabalho/processos)"
+        },
+        {
+          "codigo": "71.19-7-99",
+          "descricao": "Atividades técnicas ligadas à engenharia e arquitetura não especificadas anteriormente (somente se compatível com objeto social e atribuição)"
+        }
+      ],
+      "codigos_nfse": {
+        "cIndOp_padrao": "100301",
+        "lc116_opcoes": [
+          {
+            "codigo": "17.01.01",
+            "descricao": "Assessoria ou consultoria de qualquer natureza, não contida em outros itens desta lista",
+            "complementar_sp_sugerido": "17.01.01.001",
+            "uso": "Padrão principal para consultoria e assessoria em ergonomia / AEP / AET"
+          },
+          {
+            "codigo": "17.09.01",
+            "descricao": "Perícias, laudos, exames técnicos e análises técnicas",
+            "uso": "Quando o foco for análise técnica especializada / parecer / avaliação técnica específica"
+          },
+          {
+            "codigo": "17.02.01",
+            "descricao": "Datilografia, digitação, estenografia, expediente, secretaria em geral, resposta audível, redação, edição, revisão, manutenção, tradução, suporte e infraestrutura de TI e congêneres (não aplicar como padrão de consultoria ergonômica)"
+          }
+        ],
+        "nbs_referencia": [
+          {
+            "codigo": "114109000",
+            "descricao": "Serviços de consultoria técnica e científica não classificados em subposições anteriores"
+          },
+          {
+            "codigo": "114101000",
+            "descricao": "Serviços de consultoria em administração e gestão (quando aplicável ao escopo)"
+          },
+          {
+            "codigo": "114041000",
+            "descricao": "Serviços de análises e ensaios técnicos (conferir vinculação com LC 116 no portal)"
+          }
+        ]
+      },
+      "regras_descricao": {
+        "termos_recomendados": [
+          "consultoria técnica em ergonomia",
+          "avaliação ergonômica preliminar (AEP)",
+          "análise ergonômica do trabalho (AET)",
+          "estudo técnico ergonômico",
+          "análise das atividades e postos de trabalho",
+          "elaboração de documento técnico conforme escopo acordado com a contratante"
+        ],
+        "termos_proibidos": [
+          "engenharia",
+          "engenheiro",
+          "ART",
+          "laudo de engenharia"
+        ],
+        "template_padrao": "Prestação de serviços de consultoria técnica em ergonomia, compreendendo avaliação ergonômica, análise das atividades e elaboração de estudo/documento técnico conforme escopo acordado com a contrat
